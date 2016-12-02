@@ -22,25 +22,25 @@
         <![endif]-->
     </head>
   <body>
-    <header>
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img class="img-responsive" alt="Brand" src="img/imbd-logo.jpg"> 
-                </a>
-                <ul>
-                    <li><a>Movies</a></li>
-                    <li><a>Celebs & Photos</a></li>
-                    <li><a>Community</a></li>
-                    <li><a>News</a></li>
-                </ul>
+    <header>          
+        <div class="container-fluid">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img class="img-responsive" alt="Brand" src="img/imbd-logo.jpg"> 
+                    </a>
+                    <ul>
+                        <li><a>Movies</a></li>
+                        <li><a>Celebs & Photos</a></li>
+                        <li><a>Community</a></li>
+                        <li><a>News</a></li>
+                    </ul>
+                </div>       
+            </nav>
+        </div>
+ 
 
-            </div>
-          </div>
-        </nav>
-
-        <div class="title">
+        <div class="title text-left">
             <h3>The martian</h3>
             <h4>Adventure Sci-fi Thriller</h4>
             <!--bottone con modale-->
@@ -51,7 +51,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="main-selection">
         <div class="container selection">
             <div class="row">
                 <div class="navbar">

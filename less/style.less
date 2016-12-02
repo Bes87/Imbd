@@ -1,8 +1,8 @@
 body {
 	font-family: 'Raleway', sans-serif;
 	background-image: url("../img/themartian2.jpg");
-	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: contain;
 }
 
 header {
@@ -11,16 +11,40 @@ header {
 		border: none;
 		background-color: transparent;
 		ul {
+			padding: 20px 40px;
 			display: inline-block;
 			float: left;
 			text-align: center;
 			li {
-				a{
+				a {
 				list-style: none;
 				text-transform: uppercase;
 				color: #fff;
 				float: left;
+				&:hover {
+					color: #E7BB00;
+					text-decoration: none;
+					}
 				}
+			}
+		}
+	}
+	.title {
+		margin-left: 10%;
+		margin-right: 10%;
+		text-transform: uppercase;
+		color: #fff;
+		h3 {
+			font-size: 60px;
+			font-weight: bold;
+		}
+		h4 {
+			font-size: 15px;
+		}
+		p {
+			text-transform: none;
+			span {
+				color: #E9C640;
 			}
 		}
 	}
@@ -45,6 +69,7 @@ ul {
 
 .selection {
 	background-color: #fff;
+	padding: 0 3%;
 }
 
 .white {

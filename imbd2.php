@@ -26,7 +26,6 @@
         <div class="container-fluid"> 
             <a id="logo"><img src="img/imbd-logo.jpg"></a>
 
-            <!--carousel
             <div class="container-fluid">
                 <div id="carousel-example-vertical" class="carousel vertical slide">
                   <div class="carousel-inner" role="listbox">
@@ -35,7 +34,6 @@
                         <div class="title">
                             <h3>The martian</h3>
                             <h4>Adventure Sci-fi Thriller</h4>
-                bottone con modale
                             <button>trailer</button>
                             <p>In Theaters <br>
                                 <span>15, Oct 2015 (USA)</span>
