@@ -1,0 +1,28 @@
+{
+  "name": "imdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bes87/Imbd.git"
+  },
+  "author": "Sebastiano Mura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bes87/Imbd/issues"
+  },
+  "homepage": "https://github.com/Bes87/Imbd#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
