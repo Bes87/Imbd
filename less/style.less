@@ -3,6 +3,23 @@
 @black: #000000;
 @gray: lighten(@black, 70%);
 
+.input-group {
+	//border-bottom: 1px solid @gray;
+	.search {
+		border: none;
+		border-bottom: 1px solid @gray;
+		padding: 7px;
+		&:focus {
+		    outline: none;
+		}
+	}
+	.btn {
+		background-color: transparent;
+		color: @gray;
+		border-bottom: 1px solid @gray;
+	}
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 }
@@ -95,6 +112,55 @@ header {
 	}
 }
 
+//media query prima parte
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+		header {
+		padding: 0 5px;
+		.navbar{
+			img {
+				width: 50%;
+			}
+			.nav {
+				font-size: 11px;
+				li {
+					a {
+					list-style: none;
+					text-transform: uppercase;
+					color: #fff;
+					&:hover {
+						color: @yellow;
+						text-decoration: none;
+						background-color: transparent;
+						}
+					}
+				}
+			}
+			.profile {
+				margin-top: 28px;
+				list-style: none;
+				li {
+					display: inline;
+					img {
+						width: 40%;
+					}	
+				}
+			}
+		}
+		.title {
+			margin-top: 5%;
+			margin-left: 5%;
+			margin-right: 5%;
+			.trailer-btn{		
+				padding: 15px 20px;
+				font-size: 12px;
+				margin-top: 15px;
+			}
+		}
+	}
+}
+ //fine media query prima parte 
+
 .selection {
 	background-color: #fff;
 	position: relative; 
@@ -102,6 +168,7 @@ header {
 	.box {
 		box-shadow: 0px 15px 37px -9px rgba(0,0,0,0.40);
 		border-radius: 10px;
+		position: relative;
 		h4 {
 			text-transform: uppercase;
 		}
@@ -116,20 +183,42 @@ header {
 		}
 		i {
 			padding: 20px 10px;
-				background: -webkit-linear-gradient(top, red, #000000);
-	background: linear-gradient(top, red, #000000);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-
 			span {
 				padding: 0 10px;
 				color: #000000;
 			}
 		}
-	}
+	&:after {
+    		display: inline-block;
+   			width: 0;
+    		height: 0;
+    		border-style: solid;
+    		border-width: 0 0 50px 50px;
+    		border-color: transparent transparent #D3B521 transparent;
+    		content: "";
+    		position: absolute;
+    		bottom: 0;
+    		right: 2px;
+    		z-index: 2;
+    	}
+
+    &:before {
+    		content: "+";
+    		color: #fff;
+    		font-size: 18;
+    		font-weight: bold;
+    		position: absolute;
+    		bottom: 0;
+    		right: 3px;
+    		z-index: 5;
+    		padding-bottom: 5px; 
+    		padding- right: 8px;
+    		}	
+		}
+
 	.filters {
 		i {
-			color: @darkyellow;
+			color: @gray;
 		}
 	}
 	.navbar {
@@ -158,6 +247,10 @@ header {
 			}
 		}
 	}
+	.input {
+		.input-group;
+	}
+
 	.also {
 		text-align: center; 
 		color: @yellow;
@@ -186,6 +279,48 @@ footer {
 		color: @yellow;
 		text-decoration: none;
 		font-weight: bold;
+		}
+	}
+}
+
+//media query cards and footer
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+	.selection {
+		.navbar {
+			margin-top: 15px;
+			ul {
+				padding: 0;
+				li {
+					text-transform: uppercase;
+					padding: 0 1px;
+					font-size: 14px;
+					a {
+						color: @black;
+					}
+				}
+			}
+
+			button {
+				margin-top: 10px;
+				padding: 7px 16px;
+				background: @yellow;
+				border: none;
+				border-radius: 50px;
+				color: #fff;
+				float: right;
+				margin-right: 5px;
+				span {
+					padding-left: 6px;
+				}
+			}
+		}
+		.also {
+			text-align: center; 
+			color: @yellow;
+			i {
+				margin: 60px 0;
+			}
 		}
 	}
 }

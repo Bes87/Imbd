@@ -1,3 +1,16 @@
+.input-group .search {
+  border: none;
+  border-bottom: 1px solid #b3b3b3;
+  padding: 7px;
+}
+.input-group .search:focus {
+  outline: none;
+}
+.input-group .btn {
+  background-color: transparent;
+  color: #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+}
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -87,6 +100,47 @@ header .title p span {
   color: #E9C640;
   font-size: 20px;
 }
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  header {
+    padding: 0 5px;
+  }
+  header .navbar img {
+    width: 50%;
+  }
+  header .navbar .nav {
+    font-size: 11px;
+  }
+  header .navbar .nav li a {
+    list-style: none;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  header .navbar .nav li a:hover {
+    color: #d3b521;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  header .navbar .profile {
+    margin-top: 28px;
+    list-style: none;
+  }
+  header .navbar .profile li {
+    display: inline;
+  }
+  header .navbar .profile li img {
+    width: 40%;
+  }
+  header .title {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  header .title .trailer-btn {
+    padding: 15px 20px;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}
 .selection {
   background-color: #fff;
   position: relative;
@@ -95,6 +149,7 @@ header .title p span {
 .selection .box {
   box-shadow: 0px 15px 37px -9px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  position: relative;
 }
 .selection .box h4 {
   text-transform: uppercase;
@@ -110,17 +165,38 @@ header .title p span {
 }
 .selection .box i {
   padding: 20px 10px;
-  background: -webkit-linear-gradient(top, red, #000000);
-  background: linear-gradient(top, red, #000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .selection .box i span {
   padding: 0 10px;
   color: #000000;
 }
+.selection .box:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: transparent transparent #D3B521 transparent;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+  z-index: 2;
+}
+.selection .box:before {
+  content: "+";
+  color: #fff;
+  font-size: 18;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 3px;
+  z-index: 5;
+  padding-bottom: 5px;
+  padding-right: 8px;
+}
 .selection .filters i {
-  color: #000000;
+  color: #b3b3b3;
 }
 .selection .navbar ul {
   padding: 20px;
@@ -145,6 +221,19 @@ header .title p span {
 .selection .navbar button span {
   padding-left: 12px;
 }
+.selection .input .search {
+  border: none;
+  border-bottom: 1px solid #b3b3b3;
+  padding: 7px;
+}
+.selection .input .search:focus {
+  outline: none;
+}
+.selection .input .btn {
+  background-color: transparent;
+  color: #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+}
 .selection .also {
   text-align: center;
   color: #d3b521;
@@ -168,4 +257,40 @@ footer .also a {
   color: #d3b521;
   text-decoration: none;
   font-weight: bold;
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .selection .navbar {
+    margin-top: 15px;
+  }
+  .selection .navbar ul {
+    padding: 0;
+  }
+  .selection .navbar ul li {
+    text-transform: uppercase;
+    padding: 0 1px;
+    font-size: 14px;
+  }
+  .selection .navbar ul li a {
+    color: #000000;
+  }
+  .selection .navbar button {
+    margin-top: 10px;
+    padding: 7px 16px;
+    background: #d3b521;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    float: right;
+    margin-right: 5px;
+  }
+  .selection .navbar button span {
+    padding-left: 6px;
+  }
+  .selection .also {
+    text-align: center;
+    color: #d3b521;
+  }
+  .selection .also i {
+    margin: 60px 0;
+  }
 }

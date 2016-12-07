@@ -55,13 +55,13 @@
             </div>
         </nav>
         <div class="title">
-        <h3>The martian</h3>
-        <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Thriller</a> <br>
-        <!--bottone con modale-->
-        <button class="trailer-btn">Watch Trailer <i class="fa fa-play-circle-o" aria-hidden="true"></i></button>
-        <p>In Theaters <br>
-        <span>15, Oct 2015 (USA)</span>
-        </p>
+            <h3>The martian</h3>
+            <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Thriller</a> <br>
+            <!--bottone con modale-->
+            <button class="trailer-btn">Watch Trailer <i class="fa fa-play-circle-o" aria-hidden="true"></i></button>
+            <p>In Theaters <br>
+            <span>15, Oct 2015 (USA)</span>
+            </p>
         </div>
     </header>
 
@@ -93,13 +93,15 @@
                     <a><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
                     <a><i class="glyphicon glyphicon-th fa-2x" aria-hidden="true"></i></a>
                 </div>
-                <div class="col-sm-4 white input-group">
-                    <input type="text" class="  search-query form-control" placeholder="Search" />
-                        <span class="input-group-btn">
-                            <button class="btn btn-danger" type="button">
-                                    <span class=" glyphicon glyphicon-search"></span>
-                            </button>
-                        </span> 
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <input type="text" class="search"/>
+                            <span class="input-group-btn">
+                                <button class="btn" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                </button>
+                            </span> 
+                    </div>
                 </div>
                 <div class="col-sm-4 box">
                      <img class="img-responsive" src="img/locandina.jpg">
