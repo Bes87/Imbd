@@ -25,13 +25,14 @@ body {
 }
 
 header {
-	background-image: url("../img/themartian2.jpg");
-	background-repeat: no-repeat;
-	background-position: cover;
-	padding: 0 40px;
-	.navbar{
+	.navbar {
 		border: none;
-		background-color: transparent;
+		background-color: transparent;		
+	    width: 100%;
+		height: auto;
+		position: absolute;
+		z-index: 999;
+		background: transparent;
 		.nav {
 			margin-left: 120px;
 			margin-top: 30px;
@@ -72,16 +73,143 @@ header {
 		}
 	}
 
+	#carousel-example-vertical {
+		position: relative;
+		z-index: 0;
+		box-sizing: border-box;
+	.carousel.vertical .carousel-inner {
+	  > .item {
+	  	background-image: url(../img/themartian-background.jpg);
+	  	background-size: cover;
+	  	background-repeat: no-repeat;
+	    width: auto;
+	    height: 800px;
+	    padding-right: 50px;
+	    transition: 0.6s ease-in-out top;
+	    @media all and (transform-3d), (-webkit-transform-3d) {
+	      transition: 0.6s ease-in-out;
+	      &.next,
+	      &.active.right {
+	        transform: translate3d(0, 100%, 0);
+	        top: 0;
+	      }
+	      &.prev,
+	      &.active.left {
+	        transform: translate3d(0, -100%, 0);
+	        top: 0;
+	      }
+	      &.next.left,
+	      &.prev.right,
+	      &.active {
+	        transform: translate3d(0, 0, 0);
+	        top: 0;
+	      }
+	    }
+	  }
+	  > .active,
+	  > .next,
+	  > .prev {
+	    display: block;
+	  }
+	  > .active {
+	    top: 0;
+	  }
+	  > .next,
+	  > .prev {
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	  }
+	  > .next {
+	    top: 100%;
+	  }
+	  > .prev {
+	    top: -100%;
+	  }
+	  > .next.left,
+	  > .prev.right {
+	    top: 0;
+	  }
+	  > .active.left {
+	    top: -100%;
+	  }
+	  > .active.right {
+	    top: 100%;
+	  }
+	}
+
+	.carousel.vertical {
+	  .carousel-control {
+	    left: auto;
+	    width: 60px;
+	    &.up {
+	      top: 0;
+	      right: 0;
+	      bottom: 10%;
+	    }
+	    &.down {
+	      top: 10%;
+	      right: 0;
+	      bottom: 0;
+	    }
+	    // Toggles
+	    .icon-prev,
+	    .icon-next,
+	    .glyphicon-chevron-up,
+	    .glyphicon-chevron-down {
+	      position: absolute;
+	      top: 50%;
+	      z-index: 5;
+	      display: inline-block;
+	    }
+	    .icon-prev,
+	    .glyphicon-chevron-up {
+	      left: 50%;
+	      margin-left: -10px;
+	      top: 50%;
+	      margin-top: -10px;
+	    }
+	    .icon-next,
+	    .glyphicon-chevron-down {
+	      left: 50%;
+	      margin-left: -10px;
+	      top: 50%;
+	      margin-top: -10px;
+	    }
+	    .icon-up,
+	    .icon-down {
+	      width: 20px;
+	      height: 20px;
+	      //margin-top: -10px;
+	      line-height: 1;
+	      font-family: serif;
+	    }
+	    .icon-prev {
+	      &:before {
+	        content: '\2039';
+	        // SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+
+	      }
+	    }
+	    .icon-next {
+	      &:before {
+	        content: '\203a';
+	        // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)*/
+
+	      }
+	    }
+	  }
+	}
+
 	.title {
-		margin-top: 10%;
-		margin-left: 10%;
-		margin-right: 10%;
 		text-transform: uppercase;
 		color: #fff;
-		height: 400px;
+		height: auto;
+		padding: 20% 0 8% 10%;
 		h3 {
 			font-size: 60px;
 			font-weight: bolder;
+			margin: 0;
 		}
 		a {
 			font-size: 12px;
@@ -110,6 +238,7 @@ header {
 			}
 		}
 	}
+}
 }
 
 //media query prima parte
@@ -161,66 +290,13 @@ header {
 }
  //fine media query prima parte 
 
+
 .selection {
-	background-color: #fff;
-	position: relative; 
 	margin-top: -50px;
-	.box {
-		box-shadow: 0px 15px 37px -9px rgba(0,0,0,0.40);
-		border-radius: 10px;
-		position: relative;
-		h4 {
-			text-transform: uppercase;
-		}
-		img {
-			margin: 20px 0;
-			padding: 0;
-		}
-		a {
-			color: #CAA72A;
-			text-decoration: none;
-			font-size: 12px;
-		}
-		i {
-			padding: 20px 10px;
-			span {
-				padding: 0 10px;
-				color: #000000;
-			}
-		}
-	&:after {
-    		display: inline-block;
-   			width: 0;
-    		height: 0;
-    		border-style: solid;
-    		border-width: 0 0 50px 50px;
-    		border-color: transparent transparent #D3B521 transparent;
-    		content: "";
-    		position: absolute;
-    		bottom: 0;
-    		right: 2px;
-    		z-index: 2;
-    	}
-
-    &:before {
-    		content: "+";
-    		color: #fff;
-    		font-size: 18;
-    		font-weight: bold;
-    		position: absolute;
-    		bottom: 0;
-    		right: 3px;
-    		z-index: 5;
-    		padding-bottom: 5px; 
-    		padding- right: 8px;
-    		}	
-		}
-
-	.filters {
-		i {
-			color: @gray;
-		}
-	}
+	z-index: 999;
+	background-color: #fff;
+	border-radius: 5px;
+	position: relative;
 	.navbar {
 		ul {
 			padding: 20px;
@@ -247,10 +323,60 @@ header {
 			}
 		}
 	}
-	.input {
-		.input-group;
-	}
 
+	.grid {
+  		background: #EEE;
+ 		max-width: 1200px;
+		.box-item {
+		box-shadow: 0px 15px 37px -9px rgba(0,0,0,0.40);
+		width: 31%;
+		margin: 1%;
+		h4 {
+			text-transform: uppercase;
+		}
+		img {
+			padding: 0;
+		}
+		a {
+			color: #CAA72A;
+			text-decoration: none;
+			font-size: 12px;
+		}
+		i {
+			padding: 20px 10px;
+			span {
+				padding: 0 10px;
+				color: #000000;
+			}
+		}
+		&:after {
+	    		display: inline-block;
+	   			width: 0;
+	    		height: 0;
+	    		border-style: solid;
+	    		border-width: 0 0 50px 50px;
+	    		border-color: transparent transparent #D3B521 transparent;
+	    		content: "";
+	    		bottom: 0;
+	    		right: 0;
+	    		z-index: 2;
+	    		position: absolute;
+	    	}
+
+	    &:before {
+	    		content: "+";
+	    		color: #fff;
+	    		font-size: 18;
+	    		font-weight: bold;
+	    		bottom: 0;
+	    		right: 3px;
+	    		z-index: 5;
+	    		padding-bottom: 5px; 
+	    		padding- right: 8px;
+	    		position: absolute;
+	    		}
+			}
+		}
 	.also {
 		text-align: center; 
 		color: @yellow;
@@ -259,6 +385,7 @@ header {
 		}
 	}
 }
+ // main part 
 
 footer {
 	.mid {
@@ -323,4 +450,130 @@ footer {
 			}
 		}
 	}
+}
+
+.carousel.vertical .carousel-inner {
+  height: 100%;
+  width: auto;
+  position: relative;
+  z-index: 3;
+  > .item {
+  	background-image: url(../img/themartian-background.jpg);
+  	background-size: cover;
+    width: auto;
+    padding-right: 50px;
+    transition: 0.6s ease-in-out top;
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      transition: 0.6s ease-in-out;
+      &.next,
+      &.active.right {
+        transform: translate3d(0, 100%, 0);
+        top: 0;
+      }
+      &.prev,
+      &.active.left {
+        transform: translate3d(0, -100%, 0);
+        top: 0;
+      }
+      &.next.left,
+      &.prev.right,
+      &.active {
+        transform: translate3d(0, 0, 0);
+        top: 0;
+      }
+    }
+  }
+  > .active,
+  > .next,
+  > .prev {
+    display: block;
+  }
+  > .active {
+    top: 0;
+  }
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  > .next {
+    top: 100%;
+  }
+  > .prev {
+    top: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    top: 0;
+  }
+  > .active.left {
+    top: -100%;
+  }
+  > .active.right {
+    top: 100%;
+  }
+}
+
+.carousel.vertical {
+  .carousel-control {
+    left: auto;
+    width: 50px;
+    &.up {
+      top: 0;
+      right: 0;
+      bottom: 50%;
+    }
+    &.down {
+      top: 50%;
+      right: 0;
+      bottom: 0;
+    }
+    // Toggles
+    .icon-prev,
+    .icon-next,
+    .glyphicon-chevron-up,
+    .glyphicon-chevron-down {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      display: inline-block;
+    }
+    .icon-prev,
+    .glyphicon-chevron-up {
+      left: 50%;
+      margin-left: -10px;
+      top: 50%;
+      margin-top: -10px;
+    }
+    .icon-next,
+    .glyphicon-chevron-down {
+      left: 50%;
+      margin-left: -10px;
+      top: 50%;
+      margin-top: -10px;
+    }
+    .icon-up,
+    .icon-down {
+      width: 20px;
+      height: 20px;
+      //margin-top: -10px;
+      line-height: 1;
+      font-family: serif;
+    }
+    .icon-prev {
+      &:before {
+        content: '\2039';
+        // SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+
+      }
+    }
+    .icon-next {
+      &:before {
+        content: '\203a';
+        // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
+
+      }
+    }
+  }
 }
