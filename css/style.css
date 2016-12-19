@@ -1,7 +1,9 @@
+.input-group {
+  border-bottom: 1px solid #b3b3b3;
+  margin-right: 2%;
+}
 .input-group .search {
   border: none;
-  border-bottom: 1px solid #b3b3b3;
-  padding: 7px;
 }
 .input-group .search:focus {
   outline: none;
@@ -9,7 +11,6 @@
 .input-group .btn {
   background-color: transparent;
   color: #b3b3b3;
-  border-bottom: 1px solid #b3b3b3;
 }
 body {
   font-family: 'Poppins', sans-serif;
@@ -284,14 +285,26 @@ header #carousel-example-vertical .title p span {
 .selection .navbar button span {
   padding-left: 12px;
 }
+.selection .slider {
+  width: 80%;
+  float: right;
+}
 .selection .grid {
   background: #EEE;
   max-width: 1200px;
+  overflow: hidden;
+  /* clear fix */
+}
+.selection .grid:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 .selection .grid .box-item {
   box-shadow: 0px 15px 37px -9px rgba(0, 0, 0, 0.4);
   width: 31%;
   margin: 1%;
+  float: left;
 }
 .selection .grid .box-item h4 {
   text-transform: uppercase;
@@ -509,4 +522,63 @@ footer .also a {
 }
 .carousel.vertical .carousel-control .icon-next:before {
   content: '\203a';
+}
+.box-line {
+  box-shadow: 0px 15px 37px -9px rgba(0, 0, 0, 0.4);
+  width: 98%;
+  margin: 1%;
+}
+.box-line .movie {
+  margin-left: 20px;
+  width: 40%;
+  float: left;
+}
+.box-line .movie h4 {
+  text-transform: uppercase;
+}
+.box-line .movie a {
+  color: #CAA72A;
+  text-decoration: none;
+  font-size: 12px;
+}
+.box-line .movie i {
+  padding: 20px 10px;
+}
+.box-line .movie i span {
+  padding: 0 10px;
+  color: #000000;
+}
+.box-line img {
+  width: 40%;
+  padding: 0;
+  float: left;
+}
+.box-line:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: transparent transparent #D3B521 transparent;
+  content: "";
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+}
+.box-line:before {
+  content: "+";
+  color: #fff;
+  font-size: 18;
+  font-weight: bold;
+  bottom: 0;
+  right: 3px;
+  z-index: 5;
+  padding-bottom: 5px;
+  padding-right: 8px;
+  position: absolute;
+}
+.min-max-range {
+  height: 2px;
+  color: green;
 }

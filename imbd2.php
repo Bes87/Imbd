@@ -8,10 +8,14 @@
         <title>Imbd</title>
 
         <!-- Bootstrap--> 
+
+        
         <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css"> 
         <!--font awesome-->
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <!--JQuery UI-->
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
         <!-- personal -->
         <link href="css/style.css" rel="stylesheet">
@@ -166,11 +170,11 @@
                 </nav>
             </div>
             <div class="col-sm-8 filters">
-                    <a><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
-                    <a><i class="glyphicon glyphicon-th fa-2x" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-bars fa-2x" id="line" aria-hidden="true"></i></a>
+                    <a><i class="glyphicon glyphicon-th fa-2x" id="cell" aria-hidden="true"></i></a>
                     <div class="slider">
                       <div class="min-max-range"></div>
-                        <span class="min-max-range-output"></span>
+                      <span class="min-max-range-output"></span>
                     </div>
                 </div>
                 <div class="col-sm-4 search">
@@ -183,52 +187,53 @@
                             </span> 
                     </div>
                 </div>
+        </div>
 
-                <!--grid-->
-                <div class="col-sm-12">
-                    <div class="grid">
-                            <div class="box-item">
-                                <img class="img-responsive" src="img/locandina.jpg">
-                                <h4>Mad max: Fury road</h4>
-                                <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                                <p class="number">7</p>
-                            </div>
-                            <div class="box-item">
-                                 <img class="img-responsive" src="img/locandina.jpg">
-                                 <h4>The Hunger Games</h4>
-                                 <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                                 <p class="number">8</p>
-                            </div>
-                            <div class="box-item">
-                                 <img class="img-responsive" src="img/locandina.jpg">
-                                 <h4>Jurassic World</h4>
-                                 <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                                 <p class="number">9</p>
-                             </div>
-                            <div class="box-item">
-                                 <img class="img-responsive" src="img/locandina.jpg">
-                                 <h4>Everest</h4>
-                                 <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                                 <p class="number">7</p>
-                             </div>
-                            <div class="box-item">
-                                 <img class="img-responsive" src="img/locandina.jpg">
-                                 <h4>Insurgent</h4>
-                                 <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                                 <p class="number">6</p>
-                            </div>
-                            <div class="box-item">                         
-                                 <img class="img-responsive" src="img/locandina.jpg">
-                                 <h4>Sicario</h4>
-                                 <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                                 <p class="number">4</p>
-                             </div>
-                        </div>
+        <!--grid-->
+        <div class="grid">
+                <div class="box-line">
+                    <img class="img-responsive" src="img/locandina.jpg">
+                    <div class="movie">
+                        <h4>Mad max: Fury road</h4>
+                        <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                        <p class="number">7</p>
                     </div>
-                <div class="col-sm-12 also">
-                    <i class="fa fa-spinner fa-4x" aria-hidden="true"></i>
                 </div>
-             </div>
+                <div class="box-line">
+                     <img class="img-responsive" src="img/locandina.jpg">
+                     <h4>The Hunger Games</h4>
+                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                     <p class="number">8</p>
+                </div>
+                <div class="box-line">
+                     <img class="img-responsive" src="img/locandina.jpg">
+                     <h4>Jurassic World</h4>
+                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                     <p class="number">9</p>
+                 </div>
+                <div class="box-line">
+                     <img class="img-responsive" src="img/locandina.jpg">
+                     <h4>Everest</h4>
+                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                     <p class="number">7</p>
+                 </div>
+                <div class="box-line">
+                     <img class="img-responsive" src="img/locandina.jpg">
+                     <h4>Insurgent</h4>
+                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                     <p class="number">6</p>
+                </div>
+                <div class="box-line">                         
+                     <img class="img-responsive" src="img/locandina.jpg">
+                     <h4>Sicario</h4>
+                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                     <p class="number">4</p>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 also">
+                <i class="fa fa-spinner fa-4x" aria-hidden="true"></i>
+            </div>
         </div>
     </main>
     <footer>
@@ -252,12 +257,18 @@
         </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>        
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+   
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>  
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap-slider/dist/bootstrap-slider.js"></script>
     <!--Isotope-->
     <script src="node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="node_modules/bootstrap-slider/dist/bootstrap-slider.js"></script>
+
+    <!--jQuery-UI-->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  
+   
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
