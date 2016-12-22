@@ -262,6 +262,9 @@ header #carousel-example-vertical .title p span {
   border-radius: 5px;
   position: relative;
 }
+.selection .navbar {
+  border-bottom: 1px solid yellow;
+}
 .selection .navbar ul {
   padding: 20px;
 }
@@ -300,31 +303,13 @@ header #carousel-example-vertical .title p span {
   display: block;
   clear: both;
 }
-.selection .grid .box-item {
+.selection .grid .box {
   box-shadow: 0px 15px 37px -9px rgba(0, 0, 0, 0.4);
   width: 31%;
   margin: 1%;
   float: left;
 }
-.selection .grid .box-item h4 {
-  text-transform: uppercase;
-}
-.selection .grid .box-item img {
-  padding: 0;
-}
-.selection .grid .box-item a {
-  color: #CAA72A;
-  text-decoration: none;
-  font-size: 12px;
-}
-.selection .grid .box-item i {
-  padding: 20px 10px;
-}
-.selection .grid .box-item i span {
-  padding: 0 10px;
-  color: #000000;
-}
-.selection .grid .box-item:after {
+.selection .grid .box:after {
   display: inline-block;
   width: 0;
   height: 0;
@@ -337,7 +322,7 @@ header #carousel-example-vertical .title p span {
   z-index: 2;
   position: absolute;
 }
-.selection .grid .box-item:before {
+.selection .grid .box:before {
   content: "+";
   color: #fff;
   font-size: 18;
@@ -348,6 +333,27 @@ header #carousel-example-vertical .title p span {
   padding-bottom: 5px;
   padding-right: 8px;
   position: absolute;
+}
+.selection .grid .box .movie {
+  box-shadow: none;
+  margin-left: 2%;
+}
+.selection .grid .box .movie h4 {
+  text-transform: uppercase;
+}
+.selection .grid .box .movie img {
+  padding: 0;
+}
+.selection .grid .box .movie .about {
+  display: none;
+}
+.selection .grid .box .movie a {
+  color: #CAA72A;
+  text-decoration: none;
+  font-size: 12px;
+}
+.selection .grid .box .movie i {
+  padding: 20px 10px;
 }
 .selection .also {
   text-align: center;
@@ -527,31 +533,7 @@ footer .also a {
   box-shadow: 0px 15px 37px -9px rgba(0, 0, 0, 0.4);
   width: 98%;
   margin: 1%;
-}
-.box-line .movie {
-  margin-left: 20px;
-  width: 40%;
-  float: left;
-}
-.box-line .movie h4 {
-  text-transform: uppercase;
-}
-.box-line .movie a {
-  color: #CAA72A;
-  text-decoration: none;
-  font-size: 12px;
-}
-.box-line .movie i {
-  padding: 20px 10px;
-}
-.box-line .movie i span {
-  padding: 0 10px;
-  color: #000000;
-}
-.box-line img {
-  width: 40%;
-  padding: 0;
-  float: left;
+  box-sizing: border-box;
 }
 .box-line:after {
   display: inline-block;
@@ -578,7 +560,24 @@ footer .also a {
   padding-right: 8px;
   position: absolute;
 }
-.min-max-range {
-  height: 2px;
-  color: green;
+.box-line .movie {
+  margin: 20% 40% 0 45%;
+  width: 60%;
+}
+.box-line .movie h4 {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.box-line .movie a {
+  color: #CAA72A;
+  text-decoration: none;
+  font-size: 16px;
+}
+.box-line .movie i {
+  padding: 20px 10px;
+}
+.box-line img {
+  width: 40%;
+  padding: 0;
+  float: left;
 }

@@ -170,8 +170,8 @@
                 </nav>
             </div>
             <div class="col-sm-8 filters">
-                    <a><i class="fa fa-bars fa-2x" id="line" aria-hidden="true"></i></a>
-                    <a><i class="glyphicon glyphicon-th fa-2x" id="cell" aria-hidden="true"></i></a>
+                    <a id="line"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+                    <a id="cell"><i class="glyphicon glyphicon-th fa-2x" aria-hidden="true"></i></a>
                     <div class="slider">
                       <div class="min-max-range"></div>
                       <span class="min-max-range-output"></span>
@@ -191,43 +191,59 @@
 
         <!--grid-->
         <div class="grid">
-                <div class="box-line">
+                <div class="box">
                     <img class="img-responsive" src="img/locandina.jpg">
                     <div class="movie">
                         <h4>Mad max: Fury road</h4>
                         <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                        <p class="number">7</p>
+                        <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
+                        <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>7</p>
                     </div>
                 </div>
-                <div class="box-line">
+                <div class="box">
                      <img class="img-responsive" src="img/locandina.jpg">
-                     <h4>The Hunger Games</h4>
-                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                     <p class="number">8</p>
+                     <div class="movie">
+                         <h4>The Hunger Games</h4>
+                         <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                         <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
+                         <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>8</p>
+                     </div>
                 </div>
-                <div class="box-line">
+                <div class="box">
                      <img class="img-responsive" src="img/locandina.jpg">
-                     <h4>Jurassic World</h4>
-                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                     <p class="number">9</p>
+                     <div class="movie">
+                         <h4>Jurassic World</h4>
+                         <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                         <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
+                         <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>5</p>
+                     </div>
                  </div>
-                <div class="box-line">
+                <div class="box">
                      <img class="img-responsive" src="img/locandina.jpg">
-                     <h4>Everest</h4>
-                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                     <p class="number">7</p>
+                     <div class="movie">
+                         <h4>Everest</h4>
+                         <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                         <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
+                         <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>7</p>
+                     </div>
                  </div>
-                <div class="box-line">
+                <div class="box">
                      <img class="img-responsive" src="img/locandina.jpg">
-                     <h4>Insurgent</h4>
-                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                     <p class="number">6</p>
+                     <div class="movie">
+                         <h4>Insurgent</h4>
+                         <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                         <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
+                         <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>6</p>
+                     </div>
                 </div>
-                <div class="box-line">                         
+                <div class="box">                         
                      <img class="img-responsive" src="img/locandina.jpg">
-                     <h4>Sicario</h4>
-                     <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
-                     <p class="number">4</p>
+                     <div class="movie">
+                         <h4>Sicario</h4>
+                         <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
+                         <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
+                         <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>9</p>
+                     </div>
                 </div>
         </div>
         <div class="row">

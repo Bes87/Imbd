@@ -1,15 +1,18 @@
+//modal trailer videos
 $('.trailer-btn').click(function() {
 	var video = $(this).closest('.active').attr('data-attribute');
 	$('.modal iframe').attr('src', video);
 }); 
+//Modal trailer videos - End
 
-// // initial values
-var min = 1;
+// Range Slider
+var min = 0;
 var max = 10;
 
 // init Isotope
 var $grid = $('.grid').isotope({
-  itemSelector: '.box-line',
+  itemSelector: '.box',
+  layoutMode: 'fitRows',
   // filter with function
   filter: function( i, itemElem ) {
     var $number = $( itemElem ).find('.number');
@@ -17,7 +20,6 @@ var $grid = $('.grid').isotope({
     return number >= min && number <= max;
   }
 });
-
 
 var $range = $('.min-max-range').slider({
   range: true,
@@ -42,11 +44,21 @@ function updateOutput() {
 
 updateOutput();
 
+//Range Slider - End
 
+$("#line").click(function() {
+	   $('.grid > div').removeClass('box').addClass('box-line');	
+		 $('.grid').isotope({
+			  itemSelector: '.box-line',
+			  percentPosition: true,
+		}) 
+});
 
-
-
-
-
-   
+$("#cell").click(function() {
+	   $('.grid > div').removeClass('box-line').addClass('box');	
+		 $('.grid').isotope({
+			  itemSelector: '.box',
+			  percentPosition: true,
+		}) 
+});
 
