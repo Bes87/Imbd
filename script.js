@@ -62,3 +62,11 @@ $("#cell").click(function() {
 		}) 
 });
 
+// slideshow prova
+
+var images=['img/insurgent.jpg']
+
+$('.item').css({
+  'background-image': images[0],
+  'color' : 'blue'
+})

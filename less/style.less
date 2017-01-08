@@ -1,13 +1,17 @@
 @yellow: #d3b521;
-@darkyellow: darken(@yellow, 60%);
+@darkyellow: darken(@yellow, 0.5%);
 @black: #000000;
 @gray: lighten(@black, 70%);
 
 .input-group {
 	border-bottom: 1px solid @gray;
 	margin-right: 2%;
+	width: 100%;
 	.search {
 		border: none;
+		width: 85%;
+		bottom: 3px;
+		position: absolute;
 		&:focus {
 		    outline: none;
 		}
@@ -15,6 +19,7 @@
 	.btn {
 		background-color: transparent;
 		color: @gray;
+		float: right;
 	}
 }
 
@@ -72,132 +77,140 @@ header {
 	}
 
 	#carousel-example-vertical {
-		position: relative;
-		z-index: 0;
-		box-sizing: border-box;
-	.carousel.vertical .carousel-inner {
-	  > .item {
-	  	background-image: url(../img/themartian-background.jpg);
-	  	background-size: cover;
-	  	background-repeat: no-repeat;
-	    width: auto;
-	    height: 800px;
-	    padding-right: 50px;
-	    transition: 0.6s ease-in-out top;
-	    @media all and (transform-3d), (-webkit-transform-3d) {
-	      transition: 0.6s ease-in-out;
-	      &.next,
-	      &.active.right {
-	        transform: translate3d(0, 100%, 0);
-	        top: 0;
-	      }
-	      &.prev,
-	      &.active.left {
-	        transform: translate3d(0, -100%, 0);
-	        top: 0;
-	      }
-	      &.next.left,
-	      &.prev.right,
-	      &.active {
-	        transform: translate3d(0, 0, 0);
-	        top: 0;
-	      }
-	    }
-	  }
-	  > .active,
-	  > .next,
-	  > .prev {
-	    display: block;
-	  }
-	  > .active {
-	    top: 0;
-	  }
-	  > .next,
-	  > .prev {
-	    position: absolute;
-	    top: 0;
-	    width: 100%;
-	  }
-	  > .next {
-	    top: 100%;
-	  }
-	  > .prev {
-	    top: -100%;
-	  }
-	  > .next.left,
-	  > .prev.right {
-	    top: 0;
-	  }
-	  > .active.left {
-	    top: -100%;
-	  }
-	  > .active.right {
-	    top: 100%;
-	  }
-	}
+			.carousel-inner {
+				  height: 100%;
+				  width: auto;
+				  position: relative;
+				  z-index: 3;
+					  > .item {
+					  	background-image: url(../img/themartian-background.jpg);
+					  	background-size: cover;
+					    width: auto;
+					    padding-right: 50px;
+					    transition: 0.6s ease-in-out top;
+					    &:nth-child(2){
+					    	background-image: url(../img/mad_max.jpg);
+					    }
+					    &:nth-child(3) {
+					    	background-image: url(../img/Hunger_Games.jpg);
+					    }
+					    &:nth-child(4){
+					    	background-image: url(../img/jurassic_world.jpg);
+					    }
+					    &:nth-child(5) {
+					    	background-image: url(../img/everest.jpg);
+					    }
+					    @media all and (transform-3d), (-webkit-transform-3d) {
+					      transition: 0.6s ease-in-out;
+					      &.next,
+					      &.active.right {
+					        transform: translate3d(0, 100%, 0);
+					        top: 0;
+					      }
+					      &.prev,
+					      &.active.left {
+					        transform: translate3d(0, -100%, 0);
+					        top: 0;
+					      }
+					      &.next.left,
+					      &.prev.right,
+					      &.active {
+					        transform: translate3d(0, 0, 0);
+					        top: 0;
+					      }
+					    }
+					  }
+					  > .active,
+					  > .next,
+					  > .prev {
+					    display: block;
+					  }
+					  > .active {
+					    top: 0;
+					  }
+					  > .next,
+					  > .prev {
+					    position: absolute;
+					    top: 0;
+					    width: 100%;
+					  }
+					  > .next {
+					    top: 100%;
+					  }
+					  > .prev {
+					    top: -100%;
+					  }
+					  > .next.left,
+					  > .prev.right {
+					    top: 0;
+					  }
+					  > .active.left {
+					    top: -100%;
+					  }
+					  > .active.right {
+					    top: 100%;
+					  }
+					  .carousel-control {
+					    left: auto;
+					    width: 50px;
+					    &.up {
+					      top: 0;
+					      right: 5px;
+					      bottom: 5%;
+					    }
+					    &.down {
+					      top: 5%;
+					      right: 5px;
+					      bottom: 0;
+					    }
+					    // Toggles
+					    .icon-prev,
+					    .icon-next,
+					    .glyphicon-chevron-up,
+					    .glyphicon-chevron-down {
+					      position: absolute;
+					      top: 50%;
+					      z-index: 5;
+					      display: inline-block;
+					    }
+					    .icon-prev,
+					    .glyphicon-chevron-up {
+					      left: 50%;
+					      margin-left: -10px;
+					      top: 50%;
+					      margin-top: -10px;
+					    }
+					    .icon-next,
+					    .glyphicon-chevron-down {
+					      left: 50%;
+					      margin-left: -10px;
+					      top: 50%;
+					      margin-top: -10px;
+					    }
+					    .icon-up,
+					    .icon-down {
+					      width: 20px;
+					      height: 20px;
+					      //margin-top: -10px;
+					      line-height: 1;
+					      font-family: serif;
+					    }
+					    .icon-prev {
+					      &:before {
+					        content: '\2039';
+					        // SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
 
-	.carousel.vertical {
-	  .carousel-control {
-	    left: auto;
-	    width: 60px;
-	    &.up {
-	      top: 0;
-	      right: 0;
-	      bottom: 10%;
-	    }
-	    &.down {
-	      top: 10%;
-	      right: 0;
-	      bottom: 0;
-	    }
-	    // Toggles
-	    .icon-prev,
-	    .icon-next,
-	    .glyphicon-chevron-up,
-	    .glyphicon-chevron-down {
-	      position: absolute;
-	      top: 50%;
-	      z-index: 5;
-	      display: inline-block;
-	    }
-	    .icon-prev,
-	    .glyphicon-chevron-up {
-	      left: 50%;
-	      margin-left: -10px;
-	      top: 50%;
-	      margin-top: -10px;
-	    }
-	    .icon-next,
-	    .glyphicon-chevron-down {
-	      left: 50%;
-	      margin-left: -10px;
-	      top: 50%;
-	      margin-top: -10px;
-	    }
-	    .icon-up,
-	    .icon-down {
-	      width: 20px;
-	      height: 20px;
-	      //margin-top: -10px;
-	      line-height: 1;
-	      font-family: serif;
-	    }
-	    .icon-prev {
-	      &:before {
-	        content: '\2039';
-	        // SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+					      }
+					    }
+					    .icon-next {
+					      &:before {
+					        content: '\203a';
+					        // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
 
-	      }
-	    }
-	    .icon-next {
-	      &:before {
-	        content: '\203a';
-	        // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)*/
-
-	      }
-	    }
-	  }
-	}
+					      }
+					    }
+					  }
+					}
 
 	.title {
 		text-transform: uppercase;
@@ -233,10 +246,10 @@ header {
 			span {
 				color: #E9C640;
 				font-size: 20px;
+				}
 			}
 		}
 	}
-}
 }
 
 //media query prima parte
@@ -244,40 +257,42 @@ header {
 @media screen and (min-width: 426px) and (max-width: 768px) {
 		header {
 		padding: 0 5px;
-		.navbar{
-			img {
-				width: 50%;
-			}
-			.nav {
-				font-size: 11px;
-				li {
-					a {
-					list-style: none;
-					text-transform: uppercase;
-					color: #fff;
-					&:hover {
-						color: @yellow;
-						text-decoration: none;
-						background-color: transparent;
+			.navbar{
+				img {
+					width: 50%;
+				}
+				.nav {
+					font-size: 11px;
+					li {
+						padding: none;
+						a {
+						list-style: none;
+						text-transform: uppercase;
+						color: #fff;
+						padding: 0;
+						margin-top: 3px;
+						&:hover {
+							color: @yellow;
+							text-decoration: none;
+							background-color: transparent;
+							}
 						}
 					}
 				}
-			}
-			.profile {
-				margin-top: 28px;
-				list-style: none;
-				li {
-					display: inline;
-					img {
-						width: 40%;
-					}	
+				.profile {
+					margin-top: 10px;
+					list-style: none;
+					li {
+						display: inline;
+						font-size: 6px;
+						img {
+							width: 20%;
+						}	
+					}
 				}
 			}
-		}
 		.title {
-			margin-top: 5%;
-			margin-left: 5%;
-			margin-right: 5%;
+			padding: 20% 0 8% 5% !important;
 			.trailer-btn{		
 				padding: 15px 20px;
 				font-size: 12px;
@@ -296,22 +311,35 @@ header {
 	border-radius: 5px;
 	position: relative;
 	.navbar {
-		border-bottom: 1px solid yellow;
 		ul {
 			padding: 20px;
-			li {
+			>li {
 				display: inline;
 				text-transform: uppercase;
 				text-decoration: none;
-				padding: 0 28px;
+				padding: 3px 28px;
+				border-bottom: solid @gray 1.7px;
+				&:hover {
+					border-bottom: solid @darkyellow 1.7px;
+				}
+				&:last-child {
+					padding: 8px 10px;
+					&:hover {
+						border-bottom: solid @gray 1.5px ;
+					}
+				}
 				a {
 					color: #000000;
+				&:hover {
+					background-color: transparent;
+
+					}
 				}
 			}
 		}
 
 		button {
-			margin-top: 25px;
+			// margin-top: 25px;
 			padding: 10px 20px;
 			background: @yellow;
 			border: none;
@@ -322,10 +350,24 @@ header {
 			}
 		}
 	}
-	.slider {
-		width: 80%;
-		float: right;
+	.filters {	
+		margin-bottom: 30px;	
+		i {
+			color: @gray;
+		}
+		#cell i {
+			font-size: 25px;
+		}
+		.slider {
+			width: 80%;
+			float: right;
+			label {
+				font-size: 15px; 
+				color: @gray;
+			}
+		}
 	}
+	
 	.grid {
   		background: #EEE;
  		max-width: 1200px;
@@ -433,9 +475,12 @@ footer {
 				li {
 					text-transform: uppercase;
 					padding: 0 1px;
-					font-size: 14px;
+					font-size: 13px;
 					a {
 						color: @black;
+					}
+				&:last-child {
+					padding-top: 0;
 					}
 				}
 			}
@@ -464,131 +509,7 @@ footer {
 	}
 }
 
-.carousel.vertical .carousel-inner {
-  height: 100%;
-  width: auto;
-  position: relative;
-  z-index: 3;
-  > .item {
-  	background-image: url(../img/themartian-background.jpg);
-  	background-size: cover;
-    width: auto;
-    padding-right: 50px;
-    transition: 0.6s ease-in-out top;
-    @media all and (transform-3d), (-webkit-transform-3d) {
-      transition: 0.6s ease-in-out;
-      &.next,
-      &.active.right {
-        transform: translate3d(0, 100%, 0);
-        top: 0;
-      }
-      &.prev,
-      &.active.left {
-        transform: translate3d(0, -100%, 0);
-        top: 0;
-      }
-      &.next.left,
-      &.prev.right,
-      &.active {
-        transform: translate3d(0, 0, 0);
-        top: 0;
-      }
-    }
-  }
-  > .active,
-  > .next,
-  > .prev {
-    display: block;
-  }
-  > .active {
-    top: 0;
-  }
-  > .next,
-  > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  > .next {
-    top: 100%;
-  }
-  > .prev {
-    top: -100%;
-  }
-  > .next.left,
-  > .prev.right {
-    top: 0;
-  }
-  > .active.left {
-    top: -100%;
-  }
-  > .active.right {
-    top: 100%;
-  }
-}
-
-.carousel.vertical {
-  .carousel-control {
-    left: auto;
-    width: 50px;
-    &.up {
-      top: 0;
-      right: 0;
-      bottom: 50%;
-    }
-    &.down {
-      top: 50%;
-      right: 0;
-      bottom: 0;
-    }
-    // Toggles
-    .icon-prev,
-    .icon-next,
-    .glyphicon-chevron-up,
-    .glyphicon-chevron-down {
-      position: absolute;
-      top: 50%;
-      z-index: 5;
-      display: inline-block;
-    }
-    .icon-prev,
-    .glyphicon-chevron-up {
-      left: 50%;
-      margin-left: -10px;
-      top: 50%;
-      margin-top: -10px;
-    }
-    .icon-next,
-    .glyphicon-chevron-down {
-      left: 50%;
-      margin-left: -10px;
-      top: 50%;
-      margin-top: -10px;
-    }
-    .icon-up,
-    .icon-down {
-      width: 20px;
-      height: 20px;
-      //margin-top: -10px;
-      line-height: 1;
-      font-family: serif;
-    }
-    .icon-prev {
-      &:before {
-        content: '\2039';
-        // SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
-
-      }
-    }
-    .icon-next {
-      &:before {
-        content: '\203a';
-        // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
-
-      }
-    }
-  }
-}
+//Classe addizionale per visuale in Linea
 
 .box-line {
 	box-shadow: 0px 15px 37px -9px rgba(0,0,0,0.40);
@@ -597,7 +518,7 @@ footer {
 	box-sizing: border-box;
 		&:after {
 		display: inline-block;
-			width: 0;
+		width: 0;
 		height: 0;
 		border-style: solid;
 		border-width: 0 0 50px 50px;
@@ -623,7 +544,7 @@ footer {
 		}
 		.movie {
 			margin: 20% 40% 0 45%;
-			width: 60%;
+			width: 45%;
 			h4 {
 				text-transform: uppercase;
 				font-size: 25px;
@@ -644,4 +565,26 @@ footer {
 		}
 }
 
+//comandi slider
 
+.ui-state-default {
+	border-radius: 150px;
+    background-image: url(font.jpg);
+    font-weight: normal;
+    border: transparent !important;
+    background-color: #d3b521 !important;
+}
+
+&:focus {
+	outline: transparent !important;
+}
+
+.ui-slider-horizontal {
+	height: 1.5px !important;
+	background-color: @gray;
+	border: transparent !important;
+}
+
+.ui-widget-header {
+	background-color:  #d3b521 !important;
+}

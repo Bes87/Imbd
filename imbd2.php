@@ -11,11 +11,11 @@
 
         
         <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css"> 
+<!--         <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css"> --> 
         <!--font awesome-->
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <!--JQuery UI-->
-        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css"> 
 
         <!-- personal -->
         <link href="css/style.css" rel="stylesheet">
@@ -62,7 +62,7 @@
         <div id="carousel-example-vertical" class="carousel vertical slide">
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <div class="ticker-headline title">
+                        <div class="title">
                             <h3>The martian</h3>
                             <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Thriller</a> <br>
                             <!--bottone con modale-->
@@ -163,16 +163,20 @@
                             <li><a href="#">Separated link</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <button class="trailer-btn">
+                                <i class="fa fa-star" aria-hidden="true"><span>179</span></i>
+                            </button> 
+                        </li>
                     </ul>
-                    <button class="trailer-btn">
-                    <i class="fa fa-star" aria-hidden="true"><span>179</span></i>
-                    </button>  
+                     
                 </nav>
             </div>
             <div class="col-sm-8 filters">
                     <a id="line"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
                     <a id="cell"><i class="glyphicon glyphicon-th fa-2x" aria-hidden="true"></i></a>
                     <div class="slider">
+                      <label>Movie Ratings</label>
                       <div class="min-max-range"></div>
                       <span class="min-max-range-output"></span>
                     </div>
@@ -180,11 +184,9 @@
                 <div class="col-sm-4 search">
                     <div class="input-group">
                         <input type="text" class="search"/>
-                            <span class="input-group-btn">
-                                <button class="btn" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                </button>
-                            </span> 
+                            <button class="btn" type="button">
+                                <span class=" glyphicon glyphicon-search"></span>
+                            </button>
                     </div>
                 </div>
         </div>
@@ -201,18 +203,18 @@
                     </div>
                 </div>
                 <div class="box">
-                     <img class="img-responsive" src="img/locandina.jpg">
+                     <img class="img-responsive" src="img/macbeth.jpg">
                      <div class="movie">
-                         <h4>The Hunger Games</h4>
+                         <h4>Macbeth</h4>
                          <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
                          <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
                          <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>8</p>
                      </div>
                 </div>
                 <div class="box">
-                     <img class="img-responsive" src="img/locandina.jpg">
+                     <img class="img-responsive" src="img/Passengers.png">
                      <div class="movie">
-                         <h4>Jurassic World</h4>
+                         <h4>Passengers</h4>
                          <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
                          <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
                          <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>5</p>
@@ -277,12 +279,12 @@
    
         <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="node_modules/bootstrap-slider/dist/bootstrap-slider.js"></script>
+<!--     <script type="text/javascript" src="node_modules/bootstrap-slider/dist/bootstrap-slider.js"></script> -->
     <!--Isotope-->
     <script src="node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
 
     <!--jQuery-UI-->
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
   
    
     <script type="text/javascript" src="script.js"></script>

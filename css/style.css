@@ -1,9 +1,13 @@
 .input-group {
   border-bottom: 1px solid #b3b3b3;
   margin-right: 2%;
+  width: 100%;
 }
 .input-group .search {
   border: none;
+  width: 85%;
+  bottom: 3px;
+  position: absolute;
 }
 .input-group .search:focus {
   outline: none;
@@ -11,6 +15,7 @@
 .input-group .btn {
   background-color: transparent;
   color: #b3b3b3;
+  float: right;
 }
 body {
   font-family: 'Poppins', sans-serif;
@@ -60,121 +65,132 @@ header .navbar .profile li a {
   margin-top: 20px;
 }
 header .navbar .profile li a:hover {
-  color: #000000;
+  color: #d1b321;
 }
-header #carousel-example-vertical {
+header #carousel-example-vertical .carousel-inner {
+  height: 100%;
+  width: auto;
   position: relative;
-  z-index: 0;
-  box-sizing: border-box;
+  z-index: 3;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .item {
+header #carousel-example-vertical .carousel-inner > .item {
   background-image: url(../img/themartian-background.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   width: auto;
-  height: 800px;
   padding-right: 50px;
   transition: 0.6s ease-in-out top;
 }
+header #carousel-example-vertical .carousel-inner > .item:nth-child(2) {
+  background-image: url(../img/mad_max.jpg);
+}
+header #carousel-example-vertical .carousel-inner > .item:nth-child(3) {
+  background-image: url(../img/Hunger_Games.jpg);
+}
+header #carousel-example-vertical .carousel-inner > .item:nth-child(4) {
+  background-image: url(../img/jurassic_world.jpg);
+}
+header #carousel-example-vertical .carousel-inner > .item:nth-child(5) {
+  background-image: url(../img/everest.jpg);
+}
 @media all and (transform-3d), (-webkit-transform-3d) {
-  header #carousel-example-vertical .carousel.vertical .carousel-inner > .item {
+  header #carousel-example-vertical .carousel-inner > .item {
     transition: 0.6s ease-in-out;
   }
-  header #carousel-example-vertical .carousel.vertical .carousel-inner > .item.next,
-  header #carousel-example-vertical .carousel.vertical .carousel-inner > .item.active.right {
+  header #carousel-example-vertical .carousel-inner > .item.next,
+  header #carousel-example-vertical .carousel-inner > .item.active.right {
     transform: translate3d(0, 100%, 0);
     top: 0;
   }
-  header #carousel-example-vertical .carousel.vertical .carousel-inner > .item.prev,
-  header #carousel-example-vertical .carousel.vertical .carousel-inner > .item.active.left {
+  header #carousel-example-vertical .carousel-inner > .item.prev,
+  header #carousel-example-vertical .carousel-inner > .item.active.left {
     transform: translate3d(0, -100%, 0);
     top: 0;
   }
-  header #carousel-example-vertical .carousel.vertical .carousel-inner > .item.next.left,
-  header #carousel-example-vertical .carousel.vertical .carousel-inner > .item.prev.right,
-  header #carousel-example-vertical .carousel.vertical .carousel-inner > .item.active {
+  header #carousel-example-vertical .carousel-inner > .item.next.left,
+  header #carousel-example-vertical .carousel-inner > .item.prev.right,
+  header #carousel-example-vertical .carousel-inner > .item.active {
     transform: translate3d(0, 0, 0);
     top: 0;
   }
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .active,
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .next,
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .prev {
+header #carousel-example-vertical .carousel-inner > .active,
+header #carousel-example-vertical .carousel-inner > .next,
+header #carousel-example-vertical .carousel-inner > .prev {
   display: block;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .active {
+header #carousel-example-vertical .carousel-inner > .active {
   top: 0;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .next,
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .prev {
+header #carousel-example-vertical .carousel-inner > .next,
+header #carousel-example-vertical .carousel-inner > .prev {
   position: absolute;
   top: 0;
   width: 100%;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .next {
+header #carousel-example-vertical .carousel-inner > .next {
   top: 100%;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .prev {
+header #carousel-example-vertical .carousel-inner > .prev {
   top: -100%;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .next.left,
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .prev.right {
+header #carousel-example-vertical .carousel-inner > .next.left,
+header #carousel-example-vertical .carousel-inner > .prev.right {
   top: 0;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .active.left {
+header #carousel-example-vertical .carousel-inner > .active.left {
   top: -100%;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-inner > .active.right {
+header #carousel-example-vertical .carousel-inner > .active.right {
   top: 100%;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control {
+header #carousel-example-vertical .carousel-inner .carousel-control {
   left: auto;
-  width: 60px;
+  width: 50px;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control.up {
+header #carousel-example-vertical .carousel-inner .carousel-control.up {
   top: 0;
-  right: 0;
-  bottom: 10%;
+  right: 5px;
+  bottom: 5%;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control.down {
-  top: 10%;
-  right: 0;
+header #carousel-example-vertical .carousel-inner .carousel-control.down {
+  top: 5%;
+  right: 5px;
   bottom: 0;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control .icon-prev,
-header #carousel-example-vertical .carousel.vertical .carousel-control .icon-next,
-header #carousel-example-vertical .carousel.vertical .carousel-control .glyphicon-chevron-up,
-header #carousel-example-vertical .carousel.vertical .carousel-control .glyphicon-chevron-down {
+header #carousel-example-vertical .carousel-inner .carousel-control .icon-prev,
+header #carousel-example-vertical .carousel-inner .carousel-control .icon-next,
+header #carousel-example-vertical .carousel-inner .carousel-control .glyphicon-chevron-up,
+header #carousel-example-vertical .carousel-inner .carousel-control .glyphicon-chevron-down {
   position: absolute;
   top: 50%;
   z-index: 5;
   display: inline-block;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control .icon-prev,
-header #carousel-example-vertical .carousel.vertical .carousel-control .glyphicon-chevron-up {
+header #carousel-example-vertical .carousel-inner .carousel-control .icon-prev,
+header #carousel-example-vertical .carousel-inner .carousel-control .glyphicon-chevron-up {
   left: 50%;
   margin-left: -10px;
   top: 50%;
   margin-top: -10px;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control .icon-next,
-header #carousel-example-vertical .carousel.vertical .carousel-control .glyphicon-chevron-down {
+header #carousel-example-vertical .carousel-inner .carousel-control .icon-next,
+header #carousel-example-vertical .carousel-inner .carousel-control .glyphicon-chevron-down {
   left: 50%;
   margin-left: -10px;
   top: 50%;
   margin-top: -10px;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control .icon-up,
-header #carousel-example-vertical .carousel.vertical .carousel-control .icon-down {
+header #carousel-example-vertical .carousel-inner .carousel-control .icon-up,
+header #carousel-example-vertical .carousel-inner .carousel-control .icon-down {
   width: 20px;
   height: 20px;
   line-height: 1;
   font-family: serif;
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control .icon-prev:before {
+header #carousel-example-vertical .carousel-inner .carousel-control .icon-prev:before {
   content: '\2039';
 }
-header #carousel-example-vertical .carousel.vertical .carousel-control .icon-next:before {
+header #carousel-example-vertical .carousel-inner .carousel-control .icon-next:before {
   content: '\203a';
 }
 header #carousel-example-vertical .title {
@@ -224,10 +240,15 @@ header #carousel-example-vertical .title p span {
   header .navbar .nav {
     font-size: 11px;
   }
+  header .navbar .nav li {
+    padding: none;
+  }
   header .navbar .nav li a {
     list-style: none;
     text-transform: uppercase;
     color: #fff;
+    padding: 0;
+    margin-top: 3px;
   }
   header .navbar .nav li a:hover {
     color: #d3b521;
@@ -235,19 +256,18 @@ header #carousel-example-vertical .title p span {
     background-color: transparent;
   }
   header .navbar .profile {
-    margin-top: 28px;
+    margin-top: 10px;
     list-style: none;
   }
   header .navbar .profile li {
     display: inline;
+    font-size: 6px;
   }
   header .navbar .profile li img {
-    width: 40%;
+    width: 20%;
   }
   header .title {
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 20% 0 8% 5% !important;
   }
   header .title .trailer-btn {
     padding: 15px 20px;
@@ -262,23 +282,32 @@ header #carousel-example-vertical .title p span {
   border-radius: 5px;
   position: relative;
 }
-.selection .navbar {
-  border-bottom: 1px solid yellow;
-}
 .selection .navbar ul {
   padding: 20px;
 }
-.selection .navbar ul li {
+.selection .navbar ul > li {
   display: inline;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0 28px;
+  padding: 3px 28px;
+  border-bottom: solid #b3b3b3 1.7px;
 }
-.selection .navbar ul li a {
+.selection .navbar ul > li:hover {
+  border-bottom: solid #d1b321 1.7px;
+}
+.selection .navbar ul > li:last-child {
+  padding: 8px 10px;
+}
+.selection .navbar ul > li:last-child:hover {
+  border-bottom: solid #b3b3b3 1.5px;
+}
+.selection .navbar ul > li a {
   color: #000000;
 }
+.selection .navbar ul > li a:hover {
+  background-color: transparent;
+}
 .selection .navbar button {
-  margin-top: 25px;
   padding: 10px 20px;
   background: #d3b521;
   border: none;
@@ -288,9 +317,22 @@ header #carousel-example-vertical .title p span {
 .selection .navbar button span {
   padding-left: 12px;
 }
-.selection .slider {
+.selection .filters {
+  margin-bottom: 30px;
+}
+.selection .filters i {
+  color: #b3b3b3;
+}
+.selection .filters #cell i {
+  font-size: 25px;
+}
+.selection .filters .slider {
   width: 80%;
   float: right;
+}
+.selection .filters .slider label {
+  font-size: 15px;
+  color: #b3b3b3;
 }
 .selection .grid {
   background: #EEE;
@@ -389,10 +431,13 @@ footer .also a {
   .selection .navbar ul li {
     text-transform: uppercase;
     padding: 0 1px;
-    font-size: 14px;
+    font-size: 13px;
   }
   .selection .navbar ul li a {
     color: #000000;
+  }
+  .selection .navbar ul li:last-child {
+    padding-top: 0;
   }
   .selection .navbar button {
     margin-top: 10px;
@@ -414,120 +459,6 @@ footer .also a {
   .selection .also i {
     margin: 60px 0;
   }
-}
-.carousel.vertical .carousel-inner {
-  height: 100%;
-  width: auto;
-  position: relative;
-  z-index: 3;
-}
-.carousel.vertical .carousel-inner > .item {
-  background-image: url(../img/themartian-background.jpg);
-  background-size: cover;
-  width: auto;
-  padding-right: 50px;
-  transition: 0.6s ease-in-out top;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel.vertical .carousel-inner > .item {
-    transition: 0.6s ease-in-out;
-  }
-  .carousel.vertical .carousel-inner > .item.next,
-  .carousel.vertical .carousel-inner > .item.active.right {
-    transform: translate3d(0, 100%, 0);
-    top: 0;
-  }
-  .carousel.vertical .carousel-inner > .item.prev,
-  .carousel.vertical .carousel-inner > .item.active.left {
-    transform: translate3d(0, -100%, 0);
-    top: 0;
-  }
-  .carousel.vertical .carousel-inner > .item.next.left,
-  .carousel.vertical .carousel-inner > .item.prev.right,
-  .carousel.vertical .carousel-inner > .item.active {
-    transform: translate3d(0, 0, 0);
-    top: 0;
-  }
-}
-.carousel.vertical .carousel-inner > .active,
-.carousel.vertical .carousel-inner > .next,
-.carousel.vertical .carousel-inner > .prev {
-  display: block;
-}
-.carousel.vertical .carousel-inner > .active {
-  top: 0;
-}
-.carousel.vertical .carousel-inner > .next,
-.carousel.vertical .carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.carousel.vertical .carousel-inner > .next {
-  top: 100%;
-}
-.carousel.vertical .carousel-inner > .prev {
-  top: -100%;
-}
-.carousel.vertical .carousel-inner > .next.left,
-.carousel.vertical .carousel-inner > .prev.right {
-  top: 0;
-}
-.carousel.vertical .carousel-inner > .active.left {
-  top: -100%;
-}
-.carousel.vertical .carousel-inner > .active.right {
-  top: 100%;
-}
-.carousel.vertical .carousel-control {
-  left: auto;
-  width: 50px;
-}
-.carousel.vertical .carousel-control.up {
-  top: 0;
-  right: 0;
-  bottom: 50%;
-}
-.carousel.vertical .carousel-control.down {
-  top: 50%;
-  right: 0;
-  bottom: 0;
-}
-.carousel.vertical .carousel-control .icon-prev,
-.carousel.vertical .carousel-control .icon-next,
-.carousel.vertical .carousel-control .glyphicon-chevron-up,
-.carousel.vertical .carousel-control .glyphicon-chevron-down {
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  display: inline-block;
-}
-.carousel.vertical .carousel-control .icon-prev,
-.carousel.vertical .carousel-control .glyphicon-chevron-up {
-  left: 50%;
-  margin-left: -10px;
-  top: 50%;
-  margin-top: -10px;
-}
-.carousel.vertical .carousel-control .icon-next,
-.carousel.vertical .carousel-control .glyphicon-chevron-down {
-  left: 50%;
-  margin-left: -10px;
-  top: 50%;
-  margin-top: -10px;
-}
-.carousel.vertical .carousel-control .icon-up,
-.carousel.vertical .carousel-control .icon-down {
-  width: 20px;
-  height: 20px;
-  line-height: 1;
-  font-family: serif;
-}
-.carousel.vertical .carousel-control .icon-prev:before {
-  content: '\2039';
-}
-.carousel.vertical .carousel-control .icon-next:before {
-  content: '\203a';
 }
 .box-line {
   box-shadow: 0px 15px 37px -9px rgba(0, 0, 0, 0.4);
@@ -562,7 +493,7 @@ footer .also a {
 }
 .box-line .movie {
   margin: 20% 40% 0 45%;
-  width: 60%;
+  width: 45%;
 }
 .box-line .movie h4 {
   text-transform: uppercase;
@@ -580,4 +511,22 @@ footer .also a {
   width: 40%;
   padding: 0;
   float: left;
+}
+.ui-state-default {
+  border-radius: 150px;
+  background-image: url(font.jpg);
+  font-weight: normal;
+  border: transparent !important;
+  background-color: #d3b521 !important;
+}
+:focus {
+  outline: transparent !important;
+}
+.ui-slider-horizontal {
+  height: 1.5px !important;
+  background-color: #b3b3b3;
+  border: transparent !important;
+}
+.ui-widget-header {
+  background-color: #d3b521 !important;
 }
