@@ -17,11 +17,64 @@
   color: #b3b3b3;
   float: right;
 }
+.box-line {
+  box-shadow: 0px 15px 37px -9px rgba(0, 0, 0, 0.4);
+  width: 98%;
+  margin: 1%;
+  box-sizing: border-box;
+}
+.box-line:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: transparent transparent #D3B521 transparent;
+  content: "";
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+}
+.box-line:before {
+  content: "+";
+  color: #fff;
+  font-size: 18;
+  font-weight: bold;
+  bottom: 0;
+  right: 3px;
+  z-index: 5;
+  padding-bottom: 5px;
+  padding-right: 8px;
+  position: absolute;
+}
+.box-line .movie {
+  margin: 20% 40% 0 45%;
+  width: 45%;
+}
+.box-line .movie h4 {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.box-line .movie a {
+  color: #CAA72A;
+  text-decoration: none;
+  font-size: 16px;
+}
+.box-line .movie i {
+  padding: 20px 10px;
+}
+.box-line img {
+  width: 40%;
+  padding: 0;
+  float: left;
+}
 body {
   font-family: 'Poppins', sans-serif;
 }
 header .navbar {
   border: none;
+  padding: 0 1%;
   background-color: transparent;
   width: 100%;
   height: auto;
@@ -30,7 +83,7 @@ header .navbar {
   background: transparent;
 }
 header .navbar .nav {
-  margin-left: 120px;
+  margin-left: 15%;
   margin-top: 30px;
 }
 header .navbar .nav li {
@@ -50,19 +103,20 @@ header .navbar .nav li a:hover {
 header .navbar .profile {
   margin-top: 28px;
   list-style: none;
+  margin-right: 20px;
 }
 header .navbar .profile li {
   display: inline;
 }
 header .navbar .profile li img {
-  width: 40%;
+  width: 30%;
 }
 header .navbar .profile li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
-  padding: 20px;
-  margin-top: 20px;
+  font-size: 15px;
+  padding: 25px;
+  margin-top: 40px;
 }
 header .navbar .profile li a:hover {
   color: #d1b321;
@@ -150,10 +204,10 @@ header #carousel-example-vertical .carousel-inner .carousel-control {
 header #carousel-example-vertical .carousel-inner .carousel-control.up {
   top: 0;
   right: 5px;
-  bottom: 5%;
+  bottom: 45%;
 }
 header #carousel-example-vertical .carousel-inner .carousel-control.down {
-  top: 5%;
+  top: 45%;
   right: 5px;
   bottom: 0;
 }
@@ -168,16 +222,16 @@ header #carousel-example-vertical .carousel-inner .carousel-control .glyphicon-c
 }
 header #carousel-example-vertical .carousel-inner .carousel-control .icon-prev,
 header #carousel-example-vertical .carousel-inner .carousel-control .glyphicon-chevron-up {
-  left: 50%;
+  left: 40%;
   margin-left: -10px;
-  top: 50%;
+  top: 85%;
   margin-top: -10px;
 }
 header #carousel-example-vertical .carousel-inner .carousel-control .icon-next,
 header #carousel-example-vertical .carousel-inner .carousel-control .glyphicon-chevron-down {
-  left: 50%;
+  left: 40%;
   margin-left: -10px;
-  top: 50%;
+  top: 15%;
   margin-top: -10px;
 }
 header #carousel-example-vertical .carousel-inner .carousel-control .icon-up,
@@ -187,30 +241,24 @@ header #carousel-example-vertical .carousel-inner .carousel-control .icon-down {
   line-height: 1;
   font-family: serif;
 }
-header #carousel-example-vertical .carousel-inner .carousel-control .icon-prev:before {
-  content: '\2039';
-}
-header #carousel-example-vertical .carousel-inner .carousel-control .icon-next:before {
-  content: '\203a';
-}
-header #carousel-example-vertical .title {
+header #carousel-example-vertical .carousel-inner .title {
   text-transform: uppercase;
   color: #fff;
   height: auto;
   padding: 20% 0 8% 10%;
 }
-header #carousel-example-vertical .title h3 {
+header #carousel-example-vertical .carousel-inner .title h3 {
   font-size: 60px;
   font-weight: bolder;
   margin: 0;
 }
-header #carousel-example-vertical .title a {
+header #carousel-example-vertical .carousel-inner .title a {
   font-size: 12px;
   text-decoration: none;
   margin-right: 30px;
   color: #fff;
 }
-header #carousel-example-vertical .title .trailer-btn {
+header #carousel-example-vertical .carousel-inner .title .trailer-btn {
   background: #d3b521;
   border-radius: 999px;
   color: #000000;
@@ -222,33 +270,34 @@ header #carousel-example-vertical .title .trailer-btn {
   border: none;
   margin-top: 15px;
 }
-header #carousel-example-vertical .title p {
+header #carousel-example-vertical .carousel-inner .title p {
   margin-top: 100px;
   text-transform: none;
 }
-header #carousel-example-vertical .title p span {
+header #carousel-example-vertical .carousel-inner .title p span {
   color: #E9C640;
   font-size: 20px;
 }
-@media screen and (min-width: 426px) and (max-width: 768px) {
-  header {
-    padding: 0 5px;
+@media screen and (min-width: 426px) and (max-width: 769px) {
+  header .navbar {
+    padding: 0;
   }
-  header .navbar img {
-    width: 50%;
+  header .navbar .navbar-brand {
+    margin-left: 15px;
+    width: 15%;
   }
   header .navbar .nav {
-    font-size: 11px;
+    margin-left: 20px;
   }
   header .navbar .nav li {
-    padding: none;
+    padding: 0 10px;
+    display: inline;
+    font-size: 11px;
   }
   header .navbar .nav li a {
     list-style: none;
     text-transform: uppercase;
     color: #fff;
-    padding: 0;
-    margin-top: 3px;
   }
   header .navbar .nav li a:hover {
     color: #d3b521;
@@ -256,23 +305,131 @@ header #carousel-example-vertical .title p span {
     background-color: transparent;
   }
   header .navbar .profile {
-    margin-top: 10px;
+    margin-top: 40px;
     list-style: none;
-  }
-  header .navbar .profile li {
-    display: inline;
-    font-size: 6px;
+    padding-left: 30px;
   }
   header .navbar .profile li img {
-    width: 20%;
+    width: 25%;
   }
-  header .title {
-    padding: 20% 0 8% 5% !important;
+  header .navbar .profile li a {
+    font-size: 10px;
+    padding: 25px;
+    margin-top: 40px;
   }
-  header .title .trailer-btn {
-    padding: 15px 20px;
+  header #carousel-example-vertical .carousel-inner .title {
+    padding: 20% 0 8% 10%;
+  }
+  header #carousel-example-vertical .carousel-inner .title h3 {
+    font-size: 40px;
+  }
+  header #carousel-example-vertical .carousel-inner .title a {
     font-size: 12px;
+    text-decoration: none;
+    margin-right: 30px;
+    color: #fff;
+  }
+  header #carousel-example-vertical .carousel-inner .title .trailer-btn {
+    background: #d3b521;
+    border-radius: 999px;
+    color: #000000;
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 13px;
+    text-align: center;
+    text-shadow: none;
+    border: none;
     margin-top: 15px;
+  }
+  header #carousel-example-vertical .carousel-inner .title p {
+    margin-top: 100px;
+    text-transform: none;
+    font-size: 12px;
+  }
+  header #carousel-example-vertical .carousel-inner .title p span {
+    color: #E9C640;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 425px) {
+  header .navbar {
+    padding: 0;
+  }
+  header .navbar .navbar-brand {
+    margin-left: 15px;
+    width: 18%;
+  }
+  header .navbar .navbar-collapse {
+    background-color: #fff;
+    z-index: 8;
+  }
+  header .navbar .navbar-collapse a {
+    color: #000000 !important;
+  }
+  header .navbar .nav {
+    margin-left: 20px;
+  }
+  header .navbar .nav li {
+    padding: 0 10px;
+    display: inline;
+    font-size: 11px;
+  }
+  header .navbar .nav li a {
+    list-style: none;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  header .navbar .nav li a:hover {
+    color: #d3b521;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  header .navbar .profile {
+    margin-top: 40px;
+    list-style: none;
+    padding-left: 30px;
+  }
+  header .navbar .profile li img {
+    width: 25%;
+  }
+  header .navbar .profile li a {
+    font-size: 10px;
+    padding: 25px;
+    margin-top: 40px;
+  }
+  header #carousel-example-vertical .carousel-inner .title {
+    padding: 15% 0 8% 10%;
+  }
+  header #carousel-example-vertical .carousel-inner .title h3 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  header #carousel-example-vertical .carousel-inner .title a {
+    font-size: 8px;
+    text-decoration: none;
+    margin-right: 30px;
+    color: #fff;
+  }
+  header #carousel-example-vertical .carousel-inner .title .trailer-btn {
+    background: #d3b521;
+    border-radius: 999px;
+    color: #000000;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 10px;
+    text-align: center;
+    text-shadow: none;
+    border: none;
+    margin-top: 15px;
+  }
+  header #carousel-example-vertical .carousel-inner .title p {
+    margin-top: 50px;
+    text-transform: none;
+    font-size: 10px;
+  }
+  header #carousel-example-vertical .carousel-inner .title p span {
+    color: #E9C640;
+    font-size: 14px;
   }
 }
 .selection {
@@ -281,6 +438,7 @@ header #carousel-example-vertical .title p span {
   background-color: #fff;
   border-radius: 5px;
   position: relative;
+  padding: 0 3%;
 }
 .selection .navbar ul {
   padding: 20px;
@@ -292,8 +450,16 @@ header #carousel-example-vertical .title p span {
   padding: 3px 28px;
   border-bottom: solid #b3b3b3 1.7px;
 }
+.selection .navbar ul > li a {
+  color: #000000;
+  background-color: transparent;
+}
 .selection .navbar ul > li:hover {
-  border-bottom: solid #d1b321 1.7px;
+  border-bottom: solid #d1b321 2px;
+  padding: 1px 28px;
+}
+.selection .navbar ul > li:hover a {
+  color: #d1b321 !important;
 }
 .selection .navbar ul > li:last-child {
   padding: 8px 10px;
@@ -301,10 +467,7 @@ header #carousel-example-vertical .title p span {
 .selection .navbar ul > li:last-child:hover {
   border-bottom: solid #b3b3b3 1.5px;
 }
-.selection .navbar ul > li a {
-  color: #000000;
-}
-.selection .navbar ul > li a:hover {
+.selection .navbar ul > li:hover {
   background-color: transparent;
 }
 .selection .navbar button {
@@ -319,16 +482,15 @@ header #carousel-example-vertical .title p span {
 }
 .selection .filters {
   margin-bottom: 30px;
+  padding-left: 2%;
 }
 .selection .filters i {
   color: #b3b3b3;
-}
-.selection .filters #cell i {
-  font-size: 25px;
+  font-size: 20px;
 }
 .selection .filters .slider {
-  width: 80%;
-  float: right;
+  width: 90%;
+  padding-left: 15%;
 }
 .selection .filters .slider label {
   font-size: 15px;
@@ -421,9 +583,9 @@ footer .also a {
   text-decoration: none;
   font-weight: bold;
 }
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 769px) {
   .selection .navbar {
-    margin-top: 15px;
+    margin-top: 20px;
   }
   .selection .navbar ul {
     padding: 0;
@@ -437,7 +599,7 @@ footer .also a {
     color: #000000;
   }
   .selection .navbar ul li:last-child {
-    padding-top: 0;
+    padding: 0 0 8px 35px;
   }
   .selection .navbar button {
     margin-top: 10px;
@@ -460,64 +622,20 @@ footer .also a {
     margin: 60px 0;
   }
 }
-.box-line {
-  box-shadow: 0px 15px 37px -9px rgba(0, 0, 0, 0.4);
-  width: 98%;
-  margin: 1%;
-  box-sizing: border-box;
-}
-.box-line:after {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 50px 50px;
-  border-color: transparent transparent #D3B521 transparent;
-  content: "";
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  position: absolute;
-}
-.box-line:before {
-  content: "+";
-  color: #fff;
-  font-size: 18;
-  font-weight: bold;
-  bottom: 0;
-  right: 3px;
-  z-index: 5;
-  padding-bottom: 5px;
-  padding-right: 8px;
-  position: absolute;
-}
-.box-line .movie {
-  margin: 20% 40% 0 45%;
-  width: 45%;
-}
-.box-line .movie h4 {
-  text-transform: uppercase;
-  font-size: 25px;
-}
-.box-line .movie a {
-  color: #CAA72A;
-  text-decoration: none;
-  font-size: 16px;
-}
-.box-line .movie i {
-  padding: 20px 10px;
-}
-.box-line img {
-  width: 40%;
-  padding: 0;
-  float: left;
-}
 .ui-state-default {
   border-radius: 150px;
   background-image: url(font.jpg);
   font-weight: normal;
   border: transparent !important;
   background-color: #d3b521 !important;
+  width: 12px !important;
+  height: 12px !important;
+  top: -5px !important;
+}
+.ui-state-default:nth-child(3) {
+  width: 16px !important;
+  height: 16px !important;
+  top: -7px !important;
 }
 :focus {
   outline: transparent !important;
@@ -529,4 +647,13 @@ footer .also a {
 }
 .ui-widget-header {
   background-color: #d3b521 !important;
+}
+.number .fa {
+  color: black;
+  transition: 0.5s ease;
+}
+.number .fa:hover {
+  background: linear-gradient(0deg, #ff0000 0%, #000000 61%, #000000 82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

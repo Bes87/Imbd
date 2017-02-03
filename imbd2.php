@@ -5,13 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Imbd</title>
+        <title>Imdb</title>
 
         <!-- Bootstrap--> 
-
-        
         <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<!--         <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css"> --> 
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css">
         <!--font awesome-->
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <!--JQuery UI-->
@@ -45,11 +43,11 @@
             </div>
 
                 <!--Collect the nav links, forms, and other content for toggling-->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.php">Movies</a></li>
-                    <li><a href="about.php">Celebs & Photos</a></li>
-                    <li><a href="#portfolio">Community</a></li>
+                    <li><a href="index2.php">Movies</a></li>
+                    <li><a href="#">Celebs & Photos</a></li>
+                    <li><a href="#">Community</a></li>
                     <li><a href="#">News</a></li>
                 </ul>
                 <ul class="profile navbar-right">
@@ -73,7 +71,7 @@
                         </div>
                     </div>
 
-                    <div class="item" data-attribute="https://www.youtube.com/embed/hEJnMQG9ev8">
+                    <div class="item">
                         <div class="ticker-headline title">
                             <h3>Mad Max</h3>
                             <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Thriller</a> <br>
@@ -84,7 +82,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="item" data-attibute="https://www.youtube.com/embed/3PkkHsuMrho">
+                    <div class="item">
                         <div class="ticker-headline title">
                             <h3>Hunger Games</h3>
                             <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Thriller</a> <br>
@@ -95,7 +93,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="item" data-attribute="https://www.youtube.com/embed/RFinNxS5KN4">
+                    <div class="item">
                         <div class="ticker-headline title">
                             <h3>Jurassic World</h3>
                             <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Thriller</a> <br>
@@ -106,7 +104,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="item" data-attribute="https://www.youtube.com/embed/79Q2rrQlPW4 ">
+                    <div class="item">
                         <div class="ticker-headline title">
                             <h3>Everest</h3>
                             <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Thriller</a> <br>
@@ -128,13 +126,13 @@
                     <span class="sr-only">Next</span>
                     </a>
                 </div>
-            </div>
         </div>
             <div id="myModal" class="modal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
                         <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/Ue4PCI0NamI" frameborder="0" allowfullscreen></iframe>
+                        <p class="tr-title"></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -184,9 +182,9 @@
                 <div class="col-sm-4 search">
                     <div class="input-group">
                         <input type="text" class="search"/>
-                            <button class="btn" type="button">
-                                <span class=" glyphicon glyphicon-search"></span>
-                            </button>
+                        <button class="btn" type="button">
+                            <span class=" glyphicon glyphicon-search"></span>
+                        </button>
                     </div>
                 </div>
         </div>
@@ -194,7 +192,7 @@
         <!--grid-->
         <div class="grid">
                 <div class="box">
-                    <img class="img-responsive" src="img/locandina.jpg">
+                    <img class="img-responsive" src="img/theMartianLoc.jpg">
                     <div class="movie">
                         <h4>Mad max: Fury road</h4>
                         <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
@@ -221,27 +219,27 @@
                      </div>
                  </div>
                 <div class="box">
-                     <img class="img-responsive" src="img/locandina.jpg">
+                     <img class="img-responsive" src="img/allegiant.jpg">
                      <div class="movie">
-                         <h4>Everest</h4>
+                         <h4>Allegiant</h4>
                          <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
                          <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
                          <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>7</p>
                      </div>
                  </div>
                 <div class="box">
-                     <img class="img-responsive" src="img/locandina.jpg">
+                     <img class="img-responsive" src="img/dag.jpg">
                      <div class="movie">
-                         <h4>Insurgent</h4>
+                         <h4>Dag</h4>
                          <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
                          <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
                          <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>6</p>
                      </div>
                 </div>
                 <div class="box">                         
-                     <img class="img-responsive" src="img/locandina.jpg">
+                     <img class="img-responsive" src="img/everestLoc.jpg">
                      <div class="movie">
-                         <h4>Sicario</h4>
+                         <h4>Everest</h4>
                          <a href="#">Adventure</a> <a href="#">Sci-fi</a>  <a href="#">Action</a> <br>
                          <p class="about">Vestibulum sodales, neque sit amet commodo auctor, quam tellus dignissim ligula, vel posuere nulla turpis rutrum arcu. Etiam massa justo, tempus eget risus a, interdum feugiat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Pellentesque nec pellentesque risus. Mauris at turpis quis nisi suscipit posuere vel id augue. Suspendisse mattis neque quis tortor tempus, vel cursus orci consequat. Quisque vitae quam vel turpis blandit molestie vel in diam. Aliquam at odio quis libero accumsan pulvinar.</p>
                          <p class="number"><i class="fa fa-heart" aria-hidden="true"></i>9</p>

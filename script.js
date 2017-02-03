@@ -1,8 +1,10 @@
+//Modal Versione Data-Attribute. Necessita dei link dei trailer inseriti come data attribute nei div ".item"
+
 //modal trailer videos
-$('.trailer-btn').click(function() {
-	var video = $(this).closest('.active').attr('data-attribute');
-	$('.modal iframe').attr('src', video);
-}); 
+// $('.trailer-btn').click(function() {
+// 	var video = $(this).closest('.active').attr('data-attribute');
+// 	$('.modal iframe').attr('src', video);
+// }); 
 //Modal trailer videos - End
 
 // Range Slider
@@ -20,6 +22,16 @@ var $grid = $('.grid').isotope({
     return number >= min && number <= max;
   }
 });
+
+var $sort = $('.grid').isotope({
+  itemSelector: '.box',
+  layoutMode: 'fitRows',
+  getSortData: {
+    number: '.number parseInt',
+  }
+});
+
+$sort.isotope({ sortBy: 'number' });
 
 var $range = $('.min-max-range').slider({
   range: true,
@@ -46,6 +58,8 @@ updateOutput();
 
 //Range Slider - End
 
+//Gestione Visualizzazione Box o Lista
+
 $("#line").click(function() {
 	   $('.grid > div').removeClass('box').addClass('box-line');	
 		 $('.grid').isotope({
@@ -62,11 +76,53 @@ $("#cell").click(function() {
 		}) 
 });
 
+// var $sort = $('.grid').isotope({
+//   itemSelector: '.box',
+//   layoutMode: 'fitRows',
+//   getSortData: {
+//     number: '.number',
+//   }
+// });
+
+// $sort.isotope({ sortBy: 'number' });
+
 // slideshow prova
 
-var images=['img/insurgent.jpg']
+// init Isotope
+var $list = $('.grid').isotope({
+  itemSelector: '.box',
+  layoutMode: 'fitRows',
+  getSortData: {
+    number: '.number parseInt',
+  },
+  sortBy: function( itemSelector ) {
+    var $number = $( itemSelector ).find('.number');
+     var number = parseInt( $number.text(), 10 );
+  }
 
-$('.item').css({
-  'background-image': images[0],
-  'color' : 'blue'
-})
+});
+
+$list.isotope({ sortBy: 'number' });
+
+
+$('.trailer-btn').click(function() {
+  var x = $(this).closest('.item').index();
+  var title = $(this).parents('.title').find('h3').text();
+  var videos = [
+    "https://www.youtube.com/embed/Ue4PCI0NamI",
+    "https://www.youtube.com/embed/hEJnMQG9ev8", 
+    "https://www.youtube.com/embed/3PkkHsuMrho", 
+    "https://www.youtube.com/embed/RFinNxS5KN4",
+    "https://www.youtube.com/embed/79Q2rrQlPW4"
+    ];
+  $('.modal iframe').attr('src', videos[x]);
+  $('.modal .tr-title').text(title).css({
+    "color": "#D3B521" ,
+    "text-transform": "uppercase",
+    "text-align": "center",
+    "font-size" : "bold",
+    "margin-top" : "15px"
+  });
+}); 
+
+
